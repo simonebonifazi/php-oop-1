@@ -32,7 +32,7 @@ class Movie
         return
         "<strong> Titolo  </strong>: $this->title ; <br />
         <strong> Anno  </strong>: $this->year ; <br />
-        <strong> Protagonisti  </strong>: $this->main_actor ; <br />
+        <strong> Protagonista  </strong>: $this->main_actor ; <br />
         <strong> Trama  </strong>: $this->plot ; <br />
         <strong> Durata  </strong>: $this->duration ; <br />
         <strong> Descrizione  </strong>: $this->description";
@@ -64,6 +64,7 @@ $first_movie = new Movie( 1, 'Io sono leggenda', 'sci-fi/horror', 2007, 'Will Sm
 
 $second_movie = new Movie( 2, 'Tredici vite','drammatico', 2022, 'Colin Farrell', '147 minuti', $second_movie_description, $second_movie_plot);
 
+//prendo le info
 $info_m_1 = $first_movie->getMovieInfo();
 $info_m_2 = $second_movie->getMovieInfo();
 
@@ -82,6 +83,7 @@ $info_m_2 = $second_movie->getMovieInfo();
 <body>
     <h1>MyMovies</h1>
     <ol>
+        <!-- stampo le info in pagina -->
         <li>
             <?= $info_m_1 ?>
         </li>
