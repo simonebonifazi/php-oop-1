@@ -30,12 +30,12 @@ class Movie
     {
         //funzione che restituisce i dati principali di una istanza
         return
-        "titolo : $this->title 
-        anno : $this->year
-        protagonisti : $this->main_actor
-        trama : $this->plot 
-        durata : $this->duration
-        descrizione : $this->description";
+        "<strong> Titolo  </strong>: $this->title ; <br />
+        <strong> Anno  </strong>: $this->year ; <br />
+        <strong> Protagonisti  </strong>: $this->main_actor ; <br />
+        <strong> Trama  </strong>: $this->plot ; <br />
+        <strong> Durata  </strong>: $this->duration ; <br />
+        <strong> Descrizione  </strong>: $this->description";
     }
 }
 //aggiungo le descrizioni dei film
@@ -62,8 +62,10 @@ $second_movie_plot = "Dodici adolescenti e un adulto rimangono intrappolati all'
 
 $first_movie = new Movie( 1, 'Io sono leggenda', 'sci-fi/horror', 2007, 'Will Smith', '101 minuti', $first_movie_description, $first_movie_plot);
 
-$second_movie = new Movie( 2, 'Tredici vite','drammatico', 2022, 'Colin Farrell', '147 minuti',$second_movie_description, $second_movie_plot);
+$second_movie = new Movie( 2, 'Tredici vite','drammatico', 2022, 'Colin Farrell', '147 minuti', $second_movie_description, $second_movie_plot);
 
+$info_m_1 = $first_movie->getMovieInfo();
+$info_m_2 = $second_movie->getMovieInfo();
 
 ?>
 
@@ -78,7 +80,15 @@ $second_movie = new Movie( 2, 'Tredici vite','drammatico', 2022, 'Colin Farrell'
 </head>
 
 <body>
-
+    <h1>MyMovies</h1>
+    <ol>
+        <li>
+            <?= $info_m_1 ?>
+        </li>
+        <li>
+            <?= $info_m_2 ?>
+        </li>
+    </ol>
 </body>
 
 </html>
